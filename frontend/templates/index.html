@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/style.css">
+    
+    <title>SDPH - Sistema de Detecção de Pragas em Hortas com IA</title>
+  </head>
+
+  <body>
+    <h1>Bem vindo ao SDPH</h1>
+    <p>Sistema de Detecção de Prgras em Hortas com IA</p>
+    <p>
+      para começar, insira carrega uma imagem de sua muda ou horta<br />clique
+      no botão abaixo.
+    </p>
+
+    <input type="file" name="image" id="inputImage" accept="image/*" max="5242880" />
+
+    <div id="viewImage" class="imageView"></div>
+
+    <script src="../static/js/imageRender.js"></script>
+  </body>
+</html>

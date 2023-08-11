@@ -1,0 +1,17 @@
+.imageView {
+  margin-top: 16px;
+  width: 400px;
+  height: 400px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.imageView img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
