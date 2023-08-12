@@ -1,29 +1,21 @@
-<!DOCTYPE html>
+{% extends "base.html" %} 
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../static/css/style.css">
+{% block content %}
+  <p>
+    para começar, insira carrega uma imagem de sua muda ou horta<br />clique no
+    botão abaixo.
+  </p>
 
-    <title>SDPH - Sistema de Detecção de Pragas em Hortas com IA</title>
-  </head>
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <input
+      type="file"
+      name="file"
+      id="inputImage"
+      accept="image/*"
+      max="5242880"
+    />
+    <input type="submit" value="Enviar Imagem" />
+  </form>
 
-  <body>
-    <h1>Bem vindo ao SDPH</h1>
-    <p>Sistema de Detecção de Prgras em Hortas com IA</p>
-    <p>
-      para começar, insira carrega uma imagem de sua muda ou horta<br />clique
-      no botão abaixo.
-    </p>
-
-    <form action="/upload" method="post" enctype="multipart/form-data">
-        <input type="file" name="file" id="inputImage" accept="image/*" max="5242880" />
-        <input type="submit" value="Enviar Imagem" />
-    </form>
-
-    <div id="viewImage" class="imageView"></div>
-
-    <script src="../static/js/imageRender.js"></script>
-  </body>
-</html>
+  <div id="viewImage" class="imageView"></div>
+{% endblock %}

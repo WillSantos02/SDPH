@@ -1,0 +1,16 @@
+{% extends "base.html" %} 
+
+{% block content %} 
+
+    {% if error_invalid_file %}
+        <p class="error-message">Error: {{ error_invalid_file }}</p>
+    {% endif %}
+    
+    {% if success_message %}
+        <p>{{ success_message }}</p>
+    {% endif %}
+
+    <button type="button" id="returnBtn">Voltar</button>
+
+    <div id="processedImageView" class="imageView"></div>
+{% endblock %}

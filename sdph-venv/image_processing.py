@@ -13,5 +13,5 @@ def upload_and_process_image(file):
         filepath = os.path.join(current_app.config['UPLOAD_FOLDER'], filename)
         file.save(filepath)
 
-        return {'message': 'File uploaded and processed successfully'}
+        return {'message': 'Imagem enviada e processada com sucesso!'}
     return {'error': 'Invalid file'}
