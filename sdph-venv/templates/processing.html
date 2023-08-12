@@ -12,5 +12,11 @@
 
     <button type="button" id="returnBtn">Voltar</button>
 
-    <div id="processedImageView" class="imageView"></div>
+    <div id="processedImageView" class="imageView">
+        {% if processed_image_filename %}
+            <img class="uploaded-image" src="{{ url_for('static', filename='upimages/' + processed_image_filename) }}" alt="Processed Image" />
+        {% else %}
+            <p>No processed image available.</p>
+        {% endif %}
+    </div>
 {% endblock %}
