@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../static/css/style.css">
-    
+
     <title>SDPH - Sistema de Detecção de Pragas em Hortas com IA</title>
   </head>
 
@@ -17,7 +17,10 @@
       no botão abaixo.
     </p>
 
-    <input type="file" name="image" id="inputImage" accept="image/*" max="5242880" />
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" id="inputImage" accept="image/*" max="5242880" />
+        <input type="submit" value="Enviar Imagem" />
+    </form>
 
     <div id="viewImage" class="imageView"></div>
 
